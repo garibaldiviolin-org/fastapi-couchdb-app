@@ -38,5 +38,5 @@ async def modify_item_partially(
 
 
 @router.delete("/items/{item_id}/", status_code=204)
-async def modify_item(item_id: int):
+async def delete_item(item_id: int):
     return None
