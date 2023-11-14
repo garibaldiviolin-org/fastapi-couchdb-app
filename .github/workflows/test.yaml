@@ -25,7 +25,7 @@ jobs:
 
       - name: Sync with main
         run: |
-          git fetch origin main
+          git fetch origin main:main
           git rebase main
         shell: bash
 
