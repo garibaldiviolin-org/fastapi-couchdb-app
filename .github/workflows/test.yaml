@@ -25,8 +25,7 @@ jobs:
 
       - name: Show current branches
         run: |
-          git branch
-          echo "This"
+          echo "$(git branch)"
         shell: bash
 
       - name: Sync with main
