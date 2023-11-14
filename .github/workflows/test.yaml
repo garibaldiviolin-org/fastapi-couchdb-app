@@ -23,6 +23,12 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Sync with main
+        run: |
+          git fetch origin main
+          git rebase main
+        shell: bash
+
       - name: Start server by running docker-compose
         run: make up
         shell: bash
