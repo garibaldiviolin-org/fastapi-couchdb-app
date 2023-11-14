@@ -35,3 +35,8 @@ async def modify_item_partially(
     item_id: int, partially_modified_item: models.PartiallyModifiedItem
 ):
     return await databases.modify_item_partially(item_id, partially_modified_item)
+
+
+@router.delete("/items/{item_id}/", status_code=204)
+async def delete_item(item_id: int):
+    return None
