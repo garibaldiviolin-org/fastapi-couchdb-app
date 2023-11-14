@@ -25,11 +25,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Show current branches
-        run: |
-          echo "$(git branch)"
-        shell: bash
-
       - name: Sync with main
         run: |
           git fetch origin main:main
