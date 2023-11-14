@@ -86,3 +86,9 @@ def test_modify_item_partially_with_inexistent_id(database, item_dict, item_id):
     response = client.patch(f"/items/{item_id}/", json=item_dict)
     assert response.status_code == 404
     assert response.json() == {"detail": "item_not_found"}
+
+
+def test_delete_item(item, item_id):
+    response = client.delete(f"/items/{item_id}/")
+    assert response.status_code == 405
+    assert response.json() == {'detail': 'Method Not Allowed'}
