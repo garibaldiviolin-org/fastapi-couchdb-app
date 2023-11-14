@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Show current branches
-      - run: git branch
+        run: git branch
         shell: bash
 
       - name: Sync with main
