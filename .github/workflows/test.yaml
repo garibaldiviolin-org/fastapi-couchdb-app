@@ -21,7 +21,15 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync with main
+        run: |
+          git fetch origin main:main
+          git rebase main
+        shell: bash
 
       - name: Start server by running docker-compose
         run: make up
