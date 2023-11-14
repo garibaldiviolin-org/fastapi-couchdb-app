@@ -23,6 +23,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Show current branches
+      - run: git branch
+        shell: bash
+
       - name: Sync with main
         run: |
           git fetch origin main:main
